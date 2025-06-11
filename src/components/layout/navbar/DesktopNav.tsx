@@ -22,7 +22,7 @@ export default function DesktopNav() {
                     href={item.href}
                     className={clsx(
                         "hover:underline transition-colors",
-                        pathname === item.href ? "text-[--accent]" : "text-muted-foreground"
+                        pathname === item.href ? "text-(--accent)" : "text-muted-foreground"
                     )}
                 >
                     {item.label}

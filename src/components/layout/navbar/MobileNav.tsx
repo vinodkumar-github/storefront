@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function MobileNav() {
     return (
-        <div className="bg-red-500 lg:hidden">
+        <div className="lg:hidden">
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="ghost" size="icon">
@@ -23,7 +23,7 @@ export default function MobileNav() {
                     <SheetHeader>
                         <SheetTitle>Menu</SheetTitle>
                     </SheetHeader>
-                    <div className="flex flex-col space-y-4 pt-2">
+                    <div className="flex flex-col space-y-4 pt-2 pl-4">
                         <Link href="/products">Products</Link>
                         <Link href="/about">About</Link>
                         <Link href="/contact">Contact</Link>

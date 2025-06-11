@@ -11,6 +11,7 @@ export default function Navbar() {
                 <DesktopNav />
                 <MobileNav />
             </div>
+
         </header>
     );
 }
