@@ -9,10 +9,7 @@ const nextConfig: NextConfig = {
     },
     compiler: {
         styledComponents: false, // Optional, if you're not using styled-components
-    },
-    images: {
-        domains: ["hpqtvnqfyavrdmjojlcm.supabase.com"], // ✅ needed if loading product images from Medusa backend
-    },
+    } // ✅ needed if loading product images from Medusa backend,
 };
 
 export default nextConfig;

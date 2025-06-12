@@ -1,20 +1,20 @@
-import Navbar from "@/components/layout/navbar";
+import type { Metadata } from 'next'
+import './globals.css'
 import React from "react";
-import "@/app/globals.css"; // ✅ critical to include Tailwind styles
-import { ThemeProvider } from 'next-themes'
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import ClientLayout from "@/components/layout/ClientLayout";
+import {CustomerProvider} from "@/lib/hooks/use-customer";
+
+export const metadata: Metadata = {
+    title: 'BonaFideBakes.Co',
+    description: 'BonaFideBakes.Co - Your source for delicious baked goods',
+}
+
+export default function RootLayout({children}: {
+    children: React.ReactNode
+}) {
     return (
-        <html lang="en">
-        <body>    <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-        >
-        <Navbar />
-        <main>{children}</main>
-        </ThemeProvider>
-        </body>
+        <html lang="en" suppressHydrationWarning>
+        <CustomerProvider><body><ClientLayout>{children}</ClientLayout></body></CustomerProvider>
         </html>
-    );
+    )
 }

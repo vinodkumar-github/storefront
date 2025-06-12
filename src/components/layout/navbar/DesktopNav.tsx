@@ -8,7 +8,8 @@ import Logo from "./Logo";
 import CartButton from "./CartButton";
 import UserDropdown from "./UserDropdown";
 import SearchBar from "./SearchBar";
-import ThemeToggle from "./ThemeToggle"; // if available
+import ThemeToggle from "./ThemeToggle";
+import CategoryDropdown from "@/components/layout/navbar/CategoryDropdown"; // if available
 
 const navItems = [
     { href: "/products", label: "Products" },
@@ -42,7 +43,9 @@ export default function DesktopNav() {
             {/* Bottom Bar (Navigation Links) */}
             <div>
                 <nav className="flex justify-center">
-                    <div className="flex justify-center items-center gap-8 px-6 py-3 max-w-7xl w-full mx-auto">
+
+    <div className="flex justify-center items-center gap-8 px-6 py-3 max-w-7xl w-full mx-auto">
+                    <CategoryDropdown />
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}
